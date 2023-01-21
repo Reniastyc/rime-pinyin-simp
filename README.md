@@ -6,3 +6,8 @@
 
  ![图片](https://user-images.githubusercontent.com/37499529/213872688-0fd5b092-5756-459a-ad42-dd1de04adfaa.png)
  ![图片](https://user-images.githubusercontent.com/37499529/213872733-7294e4f7-aef9-4159-a445-90e46ffbb0bd.png)
+
+此外，亦增加了部分全角/半角符號標註功能，以便區分形近的符號，如圖所示。
+
+ ![图片](https://user-images.githubusercontent.com/37499529/213872829-9c7b0b78-ec82-4c78-84f0-a230aa48e3a3.png)
+ ![图片](https://user-images.githubusercontent.com/37499529/213872847-ea35af54-1117-46bf-ae1a-4dcfab1d0ebb.png)
