@@ -7,8 +7,10 @@ schema:
   version: '0.9'
   author:
     - 佚名
+    - 天道玄虚修改版 <reniastyc.de.em@outlook.com>
   description: |
     源自 Android 拼音
+    天道玄虛修改版，主要增加了以詞定字腳本。
   dependencies:
     - stroke
 
@@ -41,9 +43,14 @@ engine:
     - punct_translator
     - script_translator
     - reverse_lookup_translator
+  filters:
+    - lua_filter@rdeem_w2c_filter
+    - lua_filter@rdeem_hfcom_filter
+    - uniquifier
 
 speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcba
+  alphabet: 'zyxwvutsrqponmlkjihgfedcba?'
+  finals: '?'
   delimiter: " '"
   algebra:
     - erase/^hm$/
@@ -80,7 +87,7 @@ reverse_lookup:
     - xlit/hspnz/一丨丿丶乙/
 
 punctuator:
-  import_preset: symbols
+  import_preset: exsymbols
 
 key_binder:
   import_preset: default
@@ -88,8 +95,5 @@ key_binder:
 recognizer:
   import_preset: default
   patterns:
-    # hack: to enable "/fh" style symbols, '/' must be mapped to a [list].
-    # so those who have customized '/' for direct commit won't be affected by
-    # this change.
-    punct: "^/([0-9]+[a-z]*|[a-z]+)$"
+    punct: "^=([0-9]+[a-z]*|[a-z]+)$"
     reverse_lookup: "`[a-z]*'?$"
